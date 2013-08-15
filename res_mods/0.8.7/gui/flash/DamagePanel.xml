@@ -1,0 +1,112 @@
+﻿<?xml version = "1.0" encoding = "utf-8"?>
+
+<!-- Default Damage Panel 0.8.4 v.5 by GambitER -->
+
+<damagePanel>
+
+	<!-- The history list the damage taken -->
+	<configListLog visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<lineHit updown = "up"/> <!-- updown (up, down) - the latest damage to the top of the list is added to the history of the damage taken (in updown = "up") or the bottom (in updown = "down") -->
+		<addFire total = "true"/> <!-- total (true, false) - cummirovanie damage from a fire in a list of the damage taken -->
+		<location x = "235" y = "0" centerX = "false" centerY = "false"/> <!-- x, y, - координаты расположения элемента относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<size width = "250" height = "230"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$UniversCondC" size = "15" color = "0xFFFFFF" align = "left" leading="0"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста. leading - межстрочный интервал --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "250"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<colorText number = "0x999999" fire = "0xFF6C00" timer = "0xCCCCCC"/> <!-- number - цвет текста порядковых номеров в истории полученного урона в формате HEX. fire - цвет текста урона от пожара в истории полученного урона в формате HEX. time - цвет текста таймера в истории полученного урона в формате HEX -->
+		<format>{{number}} {{dmg-one}}</format> <!-- текст, который отображает строку после порядкового номера в списке истории полученного урона (переменные для подстановки: {{number}} - порядковый номер полученного урона (обязательная переменная - если не будет указана, то автоматически будет добавлена в начало строки). {{dmg-one}} - полученный урон. {{dmg-ratio-one}} - полученный урон в процентах. {{time-game}} - игровое время момента получения урона. {{time-hit}} - время с момента последнего получения урона. {{tab}} - символ табуляции)) -->
+		<format_key>{{number}} {{dmg-ratio-one}}</format_key> <!-- текст, который отображает строку (при нажатии альтернативной клавиши) после порядкового номера в списке истории полученного урона (переменные для подстановки: {{number}} - порядковый номер полученного урона (обязательная переменная - если не будет указана, то автоматически будет добавлена в начало строки). {{dmg-one}} - полученный урон. {{dmg-ratio-one}} - полученный урон в процентах. {{time-game}} - игровое время момента получения урона. {{time-hit}} - время с момента последнего получения урона. {{tab}} - символ табуляции)) -->
+		<format_timehit fire = "Fire.." destroyed = "Tank Destroyed..!"/><!-- fire - текст, который будет отображаться в строке при пожаре вместо времени с момента последнего получения урона. destroyed - текст, который будет отображаться в строке при уничтожении танка вместо времени с момента последнего получения урона -->
+	</configListLog>
+	
+	<!-- Last read message level -->
+	<configLastShot visible = "true"> <!-- visible (true, false) - отображает сообщение -->
+		<location x = "0" y = "-100" centerX = "true" centerY = "false"/> <!-- x, y, - координаты расположения сообщения относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<text font = "$UniversCondC" size = "30" color = "0xFFFFFF" align = "center"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "10" angle = "90" distance = "0" color = "0xE71600" alpha = "100" strength = "250"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<delay>3</delay> <!-- время в секундах, по истечении которого сообщение исчезнет -->
+		<format>-{{dmg-one}}</format> <!-- текст, который будет отображать строку с последним полученным уроном (переменные для подстановки: {{dmg-one}} - полученный урон. {{dmg-ratio-one}} - полученный урон в процентах. {{tab}} - символ табуляции)) -->
+	</configLastShot>
+	
+	<!-- The message about the fire -->
+	<configFireMessage visible = "true"> <!-- message (true, false) - отображает дополнительное сообщение -->
+		<location x = "0" y = "-60" centerX = "true" centerY = "false"/> <!-- x, y, - координаты расположения сообщения относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<text font = "$UniversCondC" size = "30" color = "0xFFFFFF" align = "center"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "10" angle = "90" distance = "0" color = "0xE71600" alpha = "100" strength = "250"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<format>TANK ON FIRE!</format> <!-- текст, который будет отображаться при пожаре в дополнительном сообщении -->
+		<formatdefault>TANK ON FIRE!</formatdefault> <!-- текст, который будет отображаться при пожаре вместо стандартного сообщения на панели -->
+	</configFireMessage>
+	
+	<!-- Since the last time the timer to be hit -->
+	<configTimerHit visible = "true"> <!-- visible (true, false) - отображает таймер -->
+		<location x = "130" y = "0" centerX = "false" centerY = "false"/> <!-- x, y, - координаты расположения сообщения относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<size width = "100" height = "25"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$UniversCondC" size = "15" color = "0xCCCCCC" alpha = "100" align = "right"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "250"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<delay>30</delay> <!-- время в секундах, по истечении которого таймер исчезнет -->
+		<format>{{time-hit}}</format> <!-- текст, который отображает строку с информационным таймером о времени, прошедшего с момента последнего получения урона (переменные для подстановки: {{time-game}} - игровое время момента получения урона. {{time-hit}} - время с момента последнего получения урона. {{tab}} - символ табуляции)) -->
+		<format_key>{{time-game}}</format_key> <!-- текст, который отображает строку (при нажатии альтернативной клавиши) с информационным таймером о времени, прошедшего с момента последнего получения урона (переменные для подстановки: {{time-game}} - игровое время момента получения урона. {{time-hit}} - время с момента последнего получения урона. {{tab}} - символ табуляции)) -->
+	</configTimerHit>
+	
+	<!-- Repair of decommissioned module -->
+	<configRepairAnimation visible = "true"/> <!-- visible (true, false) - отображает стандартную анимацию ремонта -->
+	<configRepairTimer visible = "true"> <!-- visible (true, false) - отображает таймер ремонта -->
+		<location x = "6" y = "4"/> <!-- x, y, - координаты расположения таймера относительно верхнего левого угла изображения иконки модуля -->
+		<size width = "45" height = "39"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$UniversCondC" size = "12" color = "0xCCCCCC" align = "left"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "250"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<format>sec</format> <!-- формат отображения таймера ремонта модуля (sec - "xx", dsec - "xx.x", csec - "xx.xx") -->
+	</configRepairTimer>
+	
+	<!-- Player's nickname -->
+	<configPlayerName visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<location x = "3" y = "163" centerX = "false" centerY = "false"/> <!-- x, y, - координаты расположения элемента относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<size width = "125" height = "22"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$FieldFont" size = "13" color = "0xCCCCCC" alpha = "100" align = "left"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "150"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+	</configPlayerName>
+	
+	<!-- The name tank -->
+	<configTankName visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<location x = "100" y = "164" centerX = "false" centerY = "false"/> <!-- x, y, - координаты расположения элемента относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<size width = "125" height = "21"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$FieldFont" size = "12" color = "0xCCCCCC" alpha = "100" align = "right"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "150"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+	</configTankName>
+	
+	<!-- The amount of XP tank -->
+	<configHealthUnit visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<text font = "$UniversCondC" size = "12" color = "0xCCCCCC" alpha = "100" align = "center"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "150"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<format>{{hp}} / {{hp-max}}</format> <!-- текст, который отображает строку с количеством ХР танка (переменные для подстановки: {{hp}} - текущее количество ХР. {{hp-ratio}} - текущее количество ХР в процентах. {{hp-max}} - максимальное количество ХР. {{dmg}} - общее количество полученного урона. {{dmg-ratio}} - общее количество полученного урона в процентах. {{tab}} - символ табуляции)) -->
+		<format_key>{{hp-ratio}}</format_key> <!-- текст, который отображаетстроку (при нажатии альтернативной клавиши) с количеством ХР танка (переменные для подстановки: {{hp}} - текущее количество ХР. {{hp-ratio}} - текущее количество ХР в процентах. {{hp-max}} - максимальное количество ХР. {{dmg}} - общее количество полученного урона. {{dmg-ratio}} - общее количество полученного урона в процентах. {{tab}} - символ табуляции)) -->
+	</configHealthUnit>
+
+	<!-- Unit of measurement of the speed of the tank -->
+	<configSpeedUnit visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<text font = "$FieldFont" size = "8" color = "0x57543E" alpha = "100" align = "center"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "2" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "45"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<format>km/h</format> <!-- the text, which will display the unit tank speed -->
+	</configSpeedUnit>
+	
+	<!-- The tank's speed -->
+	<configSpeedTank visible = "true"> <!-- visible (true, false) - отображает элемент -->
+		<text font = "$UniversCondC" size = "15" color_stop = "0x888359" color_forward = "0x888359" color_back = "0x888359" alpha = "100" align = "center"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "2" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "45"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+	</configSpeedTank>
+	
+	<!-- Background image -->
+	<configBackground alpha = "100"/> <!-- alpha (от 100 до 0) - задает прозрачность фонового изображения панели -->
+	
+	<!-- System time -->
+	<configTimeSystem visible = "false"> <!-- visible (true, false) - отображает элемент -->
+		<location x = "20" y = "0" centerX = "false" centerY = "false"/> <!-- x, y, - координаты расположения элемента относительно центра экрана (при centerX/centerY = "true") или верхнего левого угла панели (при centerX/centerY = "false") -->
+		<size width = "100" height = "25"/> <!-- width - ширина элемента. height - высота элемента -->
+		<text font = "$UniversCondC" size = "15" color = "0x999999" alpha = "100" align = "left"/> <!-- font - шрифт, который должен быть установлен на компьютере. size - размер шрифта. color - цвет шрифта в формате HEX. align (left, right, center) - выравнивание текста --> 
+		<filter size = "5" angle = "90" distance = "0" color = "0x000000" alpha = "100" strength = "150"/> <!-- size - размер тени. angle - угол тени. distance - расстояние смещения тени. color - цвет тени. alpha - прозрачность тени. strength - степень нанесения тени -->
+		<format>hh:mm</format> <!-- формат отображения системного времени (hh:mm, hh:mm:ss) -->
+	</configTimeSystem>
+	
+	<!-- Key to display the alternate text -->
+	<configKeyAltText key = "17"/> <!-- код клавиши, по нажатию которой будет выводиться альтернативный текст из <format_key> .. </format_key> для строк с отображением количества ХР танка, списка истории полученного урона и таймера с момента последнего получения урона -->
+	
+</damagePanel>

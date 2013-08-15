@@ -1,0 +1,441 @@
+﻿<!-- Total per Battle + session Statistics  -->
+<!-- Author: Vslav666, english translation by _Jeso_-->
+
+<!-- To edit ServiceChannelPage.xml use an editor that supports UTF-8, for example Notepad or Notepad++. WordPad does not support this encoding and will "kill" the config file. -->
+
+<!-- [] - Available options -->
+<!-- true (true) - item is displayed -->
+<!-- false (false) - the item is not displayed -->
+<!-- n (number) - integer (fractions lead to crash) -->
+<!-- s (string) - a string, all characters -->
+<!-- c (char) - one character -->
+<!-- # ffffff - color in a 16-hexadecimal calculation -->
+
+<config>
+	<Version>1.2</Version>						  			<!-- NOTE! Incorrect version of XML-config will hang the client -->
+	
+	<TypeMod>3</TypeMod>									<!-- [1|2|3|4] Fashion type of colored posts -->
+															<!-- 1-standard, 2-MSM (Vslav, Set, V2, Stiv372, Veslo, V1), 3-YasenKrasen, 4-MCM (V0, V3, Hewlett) -->
+	<PremiumAccount>true</PremiumAccount>					<!-- [true|false] Premium account -->
+															<!-- true = Premium Account, false = Regular Account -->
+	<SeparatorGroupsOfDigits>space</SeparatorGroupsOfDigits>	<!-- [c] thousands separator ("space" - for the Russian version, "." or "," - for the UK/US version -->
+															<!-- c - a single character, if character "space", write the word "space" -->
+	<TotalBattle>							<!-- TOTAL FOR BATTLE -->
+		<Color>
+			<Victory>default</Victory>						<!-- [green|yellow|red|grey|lightGrey|action|battleResult|default] Color for Victory -->
+			<DrawGame>default</DrawGame>					<!-- [green|yellow|red|grey|lightGrey|action|battleResult|default] Color for Draw -->
+			<Defeat>default</Defeat>						<!-- [green|yellow|red|grey|lightGrey|action|battleResult|default] Color for Defeat -->
+															<!-- default - the default color is specified in the normal message files  -->
+		</Color>
+		<StartPos>0</StartPos>								<!-- [n] Indented from the left margin in pixels -->
+		<Experience>						<!-- Experience per Battle -->
+			<Visible>false</Visible>						<!-- [true|false] Visible -->
+			<Title>Exp X1/X0/Free:</Title>					<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#CDC673</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<X1>							<!-- X1 experience per Battle -->
+				<Visible>false</Visible>					<!-- [true| false] Visibility X1 experience per Battle -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After (works only for TypeMod 2 & 3) -->
+			</X1>
+			<X0>							<!-- X0 experience per Battle -->
+				<Visible>false</Visible>					<!-- [true| false] Visibility X0 experience per Battle -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After (works only for TypeMod 2 & 3) -->
+			</X0>
+			<Free>							<!-- Free experience per Battle -->
+				<Visible>false</Visible>					<!-- [true| false] Visibility free experience per Battle -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#CD853F</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After (works only for TypeMod 2 & 3) -->
+			</Free>
+		</Experience>
+		<Repair>							<!-- Repair -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Repairs:</Title>							<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#CDC673</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Credit>						<!-- Credits -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFFFFF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Credit>
+		</Repair>
+		<Ammunition>						<!-- Ammunition -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Ammunition:</Title>						<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#CDC673</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Credit>						<!-- Credits -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFFFFF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Credit>
+			<Gold>							<!-- Gold -->
+				<Bold>false</Bold>							<!-- [true|false] Visible -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFE769</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Gold>
+		</Ammunition>
+		<Equipment>							<!-- Equipment -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Equipment:</Title>						<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#CDC673</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Credit>						<!-- Credits -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFFFFF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Credit>
+			<Gold>							<!-- Gold -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFE769</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Gold>
+		</Equipment>
+		<Total>								<!-- Total -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Total:</Title>							<!-- [s] Title text -->
+			<Bold>true</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#CDC673</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Credit>						<!-- Credits -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color of a positive result -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color of a negative result -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Credit>
+			<Gold>							<!-- Gold -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color of a positive result -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color of a negative result -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->
+			</Gold>			
+		</Total>
+		<ExperienceAction>					<!--  Experience for Mid-Week Medal Hunt -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Bonus:</Title>							<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#00FFFF</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Experience>					<!-- Experience -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+				<Icon>2</Icon>								<!-- [0|1|2] Icon: 0-Hide, 1-Front, 2-After -->															
+			</Experience>
+		</ExperienceAction>
+	</TotalBattle>
+	
+	<Statistics>							<!-- Statistics -->
+		<Color>grey</Color>									<!-- [green|yellow|red|grey|lightgrey|battleResult] Color background -->
+		<Battle>							<!-- Battles -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Wins/Battles:</Title>					<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Victory>						<!-- Battles wins -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Percent>55</Percent>						<!-- [n] Percentage of color change -->
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color when the result is greater than or equal to the percentage -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color when the result is lesser than the percentage -->
+			</Victory>
+			<DrawGame>						<!-- Battle draws -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Draws) -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#CD853F</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</DrawGame>
+			<Total>							<!-- Total battles -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Color>#FFFF00</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Total>
+			<VictoryPercent>				<!-- Victory percent -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Victory percent) -->	
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->
+				<Rounding>2</Rounding>						<!-- [0...100] Accuracy percentage of victories, number of decimal separator -->
+				<Percent>55</Percent>						<!-- [n] Percentage of color change -->
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color when the result is greater than or equal to the percentage -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color when the result is lesser than the percentage -->
+			</VictoryPercent>
+		</Battle>
+		<Experience>						<!-- Experience -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Exp:</Title>								<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Average>						<!-- Average Experience per session -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Average experience) -->				
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Average>
+			<Total>							<!-- Total experience per session -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Total experience) -->							
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Total>
+		</Experience>
+		<ExperienceX1>						<!-- Experience shown as X1 -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Exp (x1):</Title>						<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Average>						<!-- Average X1 Experience per session -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Average experience X1) -->											
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Average>
+			<Total>							<!-- Total X1 Experience per session -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Total experience X1) -->							
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Total>
+		</ExperienceX1>
+		<ExperienceX0>						<!-- Experience shown as X0 -->
+			<Visible>false</Visible>						<!-- [true|false] Visible -->
+			<Title>Exp (x0):</Title>						<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Average>						<!-- Average X0 Experience per session -->
+				<Visible>false</Visible>					<!-- [true|false] Visibility (Average experience X0) -->											
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Average>
+			<Total>							<!-- Total X0 Experience per session -->
+				<Visible>false</Visible>					<!-- [true|false] Visibility (Total experience X0) -->							
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#1E90FF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Total>
+		</ExperienceX0>
+		<FreeExperience>					<!-- FreeExperience -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Free Exp:</Title>						<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Average>						<!-- Average free experience -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Average free experience ) -->											
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#CD853F</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Average>
+			<Total>							<!-- Free experience for session -->
+				<Visible>true</Visible>						<!-- [true|false] Visibility (Total free experience ) -->							
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#CD853F</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Total>
+		</FreeExperience>
+		<Credit>							<!-- Credits -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Credits:</Title>							<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Total>							<!-- Total per session (credits) -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color of a positive result -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color of a negative result -->
+			</Total>
+			<Battle>						<!-- Total per session (credits for fighting) -->
+				<Visible>true</Visible>						<!-- [true|false] Visible (credits for fighting) -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#FFFFFF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Battle>
+			<BuySale>						<!-- Total per session (credit transactions Buy/Sell) -->
+				<Visible>true</Visible>						<!-- [true|false] Visible -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#FFFFFF</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</BuySale>
+		</Credit>
+		<Gold>								<!-- Gold -->
+			<Visible>true</Visible>							<!-- [true|false] Visible -->
+			<Title>Gold:</Title>							<!-- [s] Title text -->
+			<Bold>false</Bold>								<!-- [true|false] Bold -->
+			<FontSize>12</FontSize>							<!-- [n] Font size -->
+			<Color>#929290</Color>							<!-- [#ffffff] Color in 16-hexadecimal -->
+			<Total>							<!-- Total per session (Gold) -->
+				<Bold>true</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<ColorPlus>#66CC66</ColorPlus>				<!-- [#ffffff] Color of a positive result -->
+				<ColorMinus>#F02828</ColorMinus>			<!-- [#ffffff] Color of a negative result -->
+			</Total>
+			<Battle>						<!-- Total per session (gold for battle) -->
+				<Visible>true</Visible>						<!-- [true|false] Visible (gold for battle) -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#FFE769</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</Battle>
+			<BuySale>						<!-- Total per session (gold transactions buy / sell) -->
+				<Visible>true</Visible>						<!-- [true|false] Visible (gold transactions Buy / Sell) -->
+				<Bold>false</Bold>							<!-- [true|false] Bold -->
+				<FontSize>12</FontSize>						<!-- [n] Font size -->			
+				<Color>#FFE769</Color>						<!-- [#ffffff] Color in 16-hexadecimal -->
+			</BuySale>
+		</Gold>
+	</Statistics>
+
+	<SysMessage>							<!-- System Messages (not from battles)-->
+		<AdminMessage>true</AdminMessage>											<!-- [true|false] Admin -->
+		<Error>true</Error>															<!-- [true|false] Error -->
+		<Warning>true</Warning>														<!-- [true|false] Warning -->
+		<Information>true</Information>												<!-- [true|false] Information -->
+		<GameGreeting>true</GameGreeting>											<!-- [true|false] Game Greeting -->
+		<PowerLevel>true</PowerLevel>												<!-- [true|false] Powerlevel -->
+		<PurchaseForCredits>true</PurchaseForCredits>								<!-- [true|false] Purchase (credits) -->
+		<PurchaseForGold>true</PurchaseForGold>										<!-- [true|false] Purchase (gold) -->
+		<DismantlingForGold>true</DismantlingForGold>								<!-- [true|false] Selling (gold) -->
+		<Selling>true</Selling>														<!-- [true|false] Selling -->
+		<Repair>true</Repair>														<!-- [true|false] Repair -->
+		<FinancialTransactionWithCredits>true</FinancialTransactionWithCredits>		<!-- [true|false] Financial Transactions (credits) -->
+		<FinancialTransactionWithGold>true</FinancialTransactionWithGold>			<!-- [true|false] Financial Transactions (gold)  -->
+		<CustomizationForCredits>true</CustomizationForCredits>						<!-- [true|false] Custumization (credits) -->
+		<CustomizationForGold>true</CustomizationForGold>							<!-- [true|false] Custumization (gold) -->		
+		<ActionBegin>true</ActionBegin>												<!-- [true|false] Action Begin -->
+		<ActionEnd>true</ActionEnd>													<!-- [true|false] Action End -->
+	</SysMessage>
+
+	<SysMessageBattle>			<!-- System messages (after a battle) -->
+		<Repair>false</Repair>														<!-- [true|false] Repairs -->
+		<PurchaseForCredits>false</PurchaseForCredits>								<!-- [true|false] Purchase (credits) -->
+		<PurchaseForGold>false</PurchaseForGold>									<!-- [true|false] Purchase (gold) -->	
+	</SysMessageBattle>
+
+	<ExperienceOfAction>		<!-- The experience obtained by the action of achievement. To correct the calculation of the free experience and reduced to X1 -->
+		<Action1>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Invader</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>1250</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action1>
+		<Action2>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Confederate</Title>												<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>750</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action2>
+		<Action3>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Patrol Duty</Title>												<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>2000</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action3>
+		<Action4>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Steel Wall</Title>												<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>500</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action4>
+		<Action5>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Defender</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>1250</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action5>		
+		<Action6>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Scout</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>250</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action6>
+		<Action7>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Sniper</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>300</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action7>
+		<Action8>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Reserved</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>1500</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action8>
+		<Action9>
+			<Use>false</Use>														<!-- [true|false] On/Off -->
+			<Title>Reserved</Title>													<!-- [s] Name of achievement as shown in your game client -->
+			<Experience>1500</Experience>											<!-- [n] The value of experience for this achievement -->
+		</Action9>
+	</ExperienceOfAction>	
+
+	<StandartMessages>			<!-- Keywords for standard messages -->
+		<GameGreeting>Welcome to the World of Tanks server</GameGreeting>
+		<Victory>Victory!</Victory>
+		<DrawGame>Draw!</DrawGame>
+		<Defeat>Defeat!</Defeat>
+		<Battle>				<!-- Keywords for reporting the results of the battle -->
+			<MessageCredit>Credits recieved:</MessageCredit>
+			<MessageExperience>Experience recieved:</MessageExperience>
+			<MessageCoefficientExperience>x</MessageCoefficientExperience>		<!-- "x" Experience coefficient -->
+			<MessageExperienceCompensation1>Fine</MessageExperienceCompensation1>
+			<MessageExperienceCompensation2>Compensation</MessageExperienceCompensation2>
+			<MessageExperienceCompensation3>Credits recieved:</MessageExperienceCompensation3>
+		</Battle>
+		<BuySale> 				<!-- Keywords for reports of buy/sell -->
+			<RAE>
+				<Repair>Repairs</Repair>
+				<Ammunition>Ammunition</Ammunition>
+				<Equipment>Equipment</Equipment>
+				<Credit>Credits spent</Credit>
+				<Gold>Gold spent</Gold>
+			</RAE>
+			<Credit11>Credits spent</Credit11>
+			<Credit21>Credits recieved</Credit21>
+			<Credit22>You have received credits</Credit22>
+			<Credit31>Total spent for purchase of ammunition</Credit31>
+			<Gold11>Gold spent</Gold11>
+			<Gold12>Commission amounted</Gold12>
+			<Gold13>Gold sent to player</Gold13>
+			<Gold14>Gold transfer was successfully completed</Gold14>
+			<Gold21>gold recieved</Gold21>
+			<Gold22>You have received gold</Gold22>
+			<Gold31>Total spent for purchase of ammunition</Gold31>
+		</BuySale>
+	</StandartMessages>
+	
+	<ErrorMessages>				<!-- Error Messages -->
+		<FileConfigNotFound>ServiceChannelPage.xml not found. Default settings are used.</FileConfigNotFound>
+		<FileConfigVariableNotFound>Variable not found. For variables not found, default settings are used.</FileConfigVariableNotFound>
+		<FileConfigVersionIncorrect>ServiceChannelPage.xml is not version "1.2"</FileConfigVersionIncorrect>
+	</ErrorMessages>
+	
+	<test> 						<!-- For tests, do not use -->
+		<TestMode>false</TestMode>							<!-- Do not put true and then ask me stupid questions why it doesn´t work :) -->
+		<StatisticsBattleVictory>8</StatisticsBattleVictory>
+		<StatisticsBattleDrawGame>2</StatisticsBattleDrawGame>
+		<StatisticsBattleTotal>12</StatisticsBattleTotal>
+		<StatisticsExperienceTotal>2000</StatisticsExperienceTotal>
+		<StatisticsExperienceX1Total>4000</StatisticsExperienceX1Total>
+		<StatisticsExperienceX0Total>6000</StatisticsExperienceX0Total>
+		<StatisticsFreeExperienceTotal>8000</StatisticsFreeExperienceTotal>
+		<StatisticsCreditBattle>158200</StatisticsCreditBattle>
+		<StatisticsCreditBuySale>-126055</StatisticsCreditBuySale>
+		<StatisticsGoldBattle>0</StatisticsGoldBattle>
+		<StatisticsGoldBuySale>-200</StatisticsGoldBuySale>
+	</test>
+</config>
+
+
